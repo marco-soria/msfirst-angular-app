@@ -1,5 +1,12 @@
 //import { Component, computed, signal } from '@angular/core';
-import { Component, computed, Input, input } from '@angular/core';
+import {
+  Component,
+  computed,
+  EventEmitter,
+  Input,
+  input,
+  Output,
+} from '@angular/core';
 
 //import { DUMMY_USERS } from '../dummy-users';
 
@@ -28,18 +35,22 @@ export class UserComponent {
   // }
 
   // SECOND PART A WITH INPUTS
+  @Input({ required: true }) id!: string;
   @Input({ required: true }) avatar!: string;
   @Input({ required: true }) name!: string;
+  @Output() select = new EventEmitter();
 
   get imagePath() {
     return 'assets/users/' + this.avatar;
   }
 
-  // SECOND PART B WITH SIGNALS
+  // SECOND PART B WITH SIGNALS FOR ACCEPTING INPUTS
   // avatar = input.required<string>();
   // name = input.required<string>();
 
   // imagePath = computed(() => `assets/users/${this.avatar()}`);
 
-  onSelectUser() {}
+  onSelectUser() {
+    this.select.emit(this.id);
+  }
 }
