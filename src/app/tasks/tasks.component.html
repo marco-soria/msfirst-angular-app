@@ -8,13 +8,9 @@
 
   <ul>
     <li>
-      <app-task />
-    </li>
-    <li>
-      <app-task />
-    </li>
-    <li>
-      <app-task />
+      @for (task of selectedUserTasks; track task.id) {
+      <app-task [task]="task" />
+      }
     </li>
   </ul>
 </section>
