@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 import { type User } from './user.model';
-import { CardComponent } from '../shared/card/card.component'; // Assuming you have a User model defined in user.model.ts
+import { CardComponent } from '../shared/card/card'; // Assuming you have a User model defined in user.model.ts
 //import { DUMMY_USERS } from '../dummy-users';
 
 // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
@@ -23,8 +23,8 @@ import { CardComponent } from '../shared/card/card.component'; // Assuming you h
 @Component({
   selector: 'app-user',
   imports: [CardComponent],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.css',
+  templateUrl: './user.html',
+  styleUrl: './user.css',
 })
 export class UserComponent {
   // FIRST PART WITH CLASSIC AND SIGNALS

@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-card',
   imports: [],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  templateUrl: './card.html',
+  styleUrl: './card.css'
 })
 export class CardComponent {
 

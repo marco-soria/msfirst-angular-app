@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 //import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { UserComponent } from './user/user.component';
+import { HeaderComponent } from './header/header';
+import { UserComponent } from './user/user';
 import { DUMMY_USERS } from './dummy-users';
-import { TasksComponent } from './tasks/tasks.component';
+import { TasksComponent } from './tasks/tasks';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +13,8 @@ import { TasksComponent } from './tasks/tasks.component';
     UserComponent,
     TasksComponent,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  templateUrl: './app.html',
+  styleUrl: './app.css',
 })
 export class AppComponent {
   users = DUMMY_USERS;
